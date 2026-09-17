@@ -1,167 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Каталог товаров — Потеряный башмак</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header>
 
-    <div>
-        <a href="../index.html">Главная страница</a>
+<header class="site-header">
+    <div class="site-header__logo">
+        <a href="../index.html" class="site-header__link">Потеряный башмак</a>
     </div>
-
-    <nav>
-        <a href="catalog.html">Каталог</a>
-        <a href="product.html">Товар</a>
+    <nav class="site-header__nav">
+        <a href="../index.html" class="site-header__link">Главная</a>
+        <a href="catalog.html" class="site-header__link">Каталог</a>
+        <a href="product.html" class="site-header__link">Товар</a>
     </nav>
-
 </header>
+
 <main>
-
-    <h1>Каталог товаров</h1>
-
-    <p>
-        В нашем насыщеном каталоге представлены разнообразные бренды одежды и обуви, большая цветовая палитка и выгодные цены.
+    <h1 class="catalog-title">Каталог товаров</h1>
+    <p class="catalog-intro">
+        В нашем насыщенном каталоге представлены разнообразные бренды одежды и обуви, богатая цветовая палитра и выгодные цены.
     </p>
 
+    
+    <div class="catalog">
+
+        
+        <article class="card card--badge">
+            <img src="../images/new_balance.jpg" alt="Кроссовки New Balance" class="card__image">
+            <h2 class="card__title">Кроссовки New Balance</h2>
+            <p class="card__info">Категория: Обувь</p>
+            <p class="card__info">Цвет: Белый</p>
+            <p class="card__info">Размеры: 37, 38, 39, 40</p>
+            <p class="card__price">25 000 ₽</p>
+            <a href="product.html#new-balance" class="btn card__btn">Подробнее</a>
+        </article>
+
+        
+        <article class="card">
+            <img src="../images/arm.jpg" alt="Шлепанцы тихоходы" class="card__image">
+            <h2 class="card__title">Шлепанцы тихоходы</h2>
+            <p class="card__info">Категория: Обувь</p>
+            <p class="card__info">Цвет: Черный</p>
+            <p class="card__info">Размеры: 37, 38, 39, 40</p>
+            <p class="card__price">25 000 ₽</p>
+            <a href="product.html#tihohody" class="btn card__btn">Подробнее</a>
+        </article>
+
+        
+        <article class="card">
+            <img src="../images/puma.jpg" alt="Кроссовки Puma" class="card__image">
+            <h2 class="card__title">Кроссовки Puma</h2>
+            <p class="card__info">Категория: Обувь</p>
+            <p class="card__info">Палитра: Белый, Черный, Розовый</p>
+            <p class="card__price">35 000 ₽</p>
+            <a href="product.html#puma" class="btn card__btn">Подробнее</a>
+        </article>
+
+        
+        <article class="card card--badge">
+            <img src="../images/adidas.jpg" alt="Кроссовки Adidas" class="card__image">
+            <h2 class="card__title">Кроссовки Adidas</h2>
+            <p class="card__info">Категория: Обувь</p>
+            <p class="card__info">Палитра: Белый, Черный, Коричневый</p>
+            <p class="card__info">Размеры: 37, 38, 39, 40</p>
+            <p class="card__price">15 000 ₽</p>
+            <a href="product.html#adidas" class="btn card__btn">Подробнее</a>
+        </article>
+
+        
+        <article class="card">
+            <img src="../images/HENDERSON.jpg" alt="Поло HENDERSON" class="card__image">
+            <h2 class="card__title">Поло HENDERSON</h2>
+            <p class="card__info">Категория: Мужская одежда</p>
+            <p class="card__info">Палитра: Белый, Черный, Зеленый, Розовый, Коричневый</p>
+            <p class="card__price">15 000 ₽</p>
+            <a href="product.html#henderson-polo" class="btn card__btn">Подробнее</a>
+        </article>
+
+       
+        <article class="card">
+            <img src="../images/HENDERSON2.jpg" alt="Майка HENDERSON" class="card__image">
+            <h2 class="card__title">Майка HENDERSON</h2>
+            <p class="card__info">Категория: Мужская одежда</p>
+            <p class="card__info">Палитра: Белый, Черный, Зеленый, Розовый, Коричневый</p>
+            <p class="card__price">32 000 ₽</p>
+            <a href="product.html#henderson-singlet" class="btn card__btn">Подробнее</a>
+        </article>
+
+        
+        <article class="card card--badge">
+            <img src="../images/CHANEL.jpg" alt="Платье CHANEL" class="card__image">
+            <h2 class="card__title">Платье CHANEL</h2>
+            <p class="card__info">Категория: Женская одежда</p>
+            <p class="card__info">Палитра: Белый, Черный, Зеленый, Розовый, Коричневый</p>
+            <p class="card__price">132 000 ₽</p>
+            <a href="product.html#chanel-dress" class="btn card__btn">Подробнее</a>
+        </article>
+
+    
+        <article class="card">
+            <img src="../images/ZARINA.jpg" alt="Свит-шот Zarina" class="card__image">
+            <h2 class="card__title">Свит-шот Zarina</h2>
+            <p class="card__info">Категория: Женская одежда</p>
+            <p class="card__info">Палитра: Белый, Черный, Розовый, Коричневый</p>
+            <p class="card__price">102 350 ₽</p>
+            <a href="product.html#zarina-sweatshirt" class="btn card__btn">Подробнее</a>
+        </article>
+
+    </div>
 </main>
-<article>
 
-    <h2>Кроссовки New Balance</h2>
-
-    <p>Цвет: Белый </p>
-
-    <p>Категория: Обувь </p>
-
-    <p>Размеры: 37, 38, 39, 40. </p>
-
-    <p>Цена: 25 000 ₽</p>
-
-    <a href="product.html">
-        Подробнее
-    </a>
-
-</article>
-<article>
-
-    <h2>Шлепанцы тихоходы</h2>
-
-    <p>Цвет: Черный </p>
-
-    <p>Категория: Обувь </p>
-
-    <p>Размеры: 37, 38, 39, 40. </p>
-
-    <p>Цена: 25 000 ₽</p>
-
-    <a href="product.html">
-        Подробнее
-    </a>
-
-</article>
-<article>
-
-    <h2>Кроссовки Puma</h2>
-
-    <p>Категория: Обувь </p>
-
-    <p>Цветовая палитра: Белый, Черный, Розовый. </p>
-
-    <p>Цена: 35 000 ₽</p>
-
-    <a href="product.html">
-        Подробнее
-    </a>
-
-</article>
-<article>
-
-    <h2>Кроссовки Adidas</h2>
-
-    <p>Категория: Обувь </p>
-
-    <p>Цветовая палитра: Белый, Черный, Коричневый. </p>
-   
-    <p> Размеры: 37, 38, 39, 40.</p>
-
-    <p>Цена: 15 000 ₽</p>
-
-    <a href="product.html">
-        Подробнее
-    </a>
-
-</article>
-<article>
-
-    <h2>Поло HENDERSON</h2>
-
-    <p>Категория: Мужская одежда </p>
-
-    <p>Цветовая палитра: Белый, Черный, Зеленый, Розовый, Коричневый. </p>
-
-    <p>Цена: 15 000 ₽</p>
-
-    <a href="product.html">
-        Подробнее
-    </a>
-
-</article>
-<article>
-
-    <h2>Майка HENDERSON</h2>
-
-    <p>Категория: Мужская одежда </p>
-
-    <p>Цветовая палитра: Белый, Черный, Зеленый, Розовый, Коричневый. </p>
-
-    <p>Цена: 32 000 ₽</p>
-
-    <a href="product.html">
-        Подробнее
-    </a>
-
-</article>
-
-<article>
-
-    <h2>Платье CHANEL</h2>
-
-    <p>Категория: Женская одежда </p>
-
-    <p>Цветовая палитра: Белый, Черный, Зеленый, Розовый, Коричневый. </p>
-
-    <p>Цена: 132 000 ₽</p>
-
-    <a href="product.html">
-        Подробнее
-    </a>
-
-</article>
-<article>
-
-    <h2> Свит-шот Zarina</h2>
-
-    <p>Категория: Женская одежда </p>
-
-    <p>Цветовая палитра: Белый, Черный, Розовый, Коричневый. </p>
-
-    <p>Цена: 102 350 ₽</p>
-
-    <a href="product.html">
-        Подробнее
-    </a>
-
-</article>
-
-<footer>
-  <img src="../images/kotost.jpg" alt="Котость" class="sneaker-img">
+<footer class="site-footer">
+    <img src="../images/kotost.jpg" alt="Котость" class="sneaker-img">
     <p>© 2026 Потеряный башмак</p>
-
-    <p>
-        Интернет-магазин брендовой одеждый
-    </p>
+    <p>Интернет-магазин брендовой одежды и обуви</p>
 </footer>
+
 </body>
 </html>

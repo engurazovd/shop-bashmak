@@ -3,416 +3,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Товары — Потеряный башмак</title>
-    <style>
-        
-        .sneaker-img {
-            width: 180px;
-            height: auto;
-        }
-
-        
-        .clothing-img {
-            width: 250px;
-            height: auto;
-        }
-
-        
-        .gif-animation {
-            width: 280px;
-            height: auto;
-            display: block;
-            margin: 30px auto 10px auto;
-            border-radius: 10px;
-        }
-    </style>
+    <title>Карточки товаров — Потеряный башмак</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
-<header>
-    <div>
-        <a href="../index.html">Потеряный башмак</a>
+<header class="site-header">
+    <div class="site-header__logo">
+        <a href="../index.html" class="site-header__link">Потеряный башмак</a>
     </div>
-    <nav>
-        <a href="../index.html">Главная</a>
-        <a href="catalog.html">Каталог</a>
-        <a href="product.html">Товар</a>
+    <nav class="site-header__nav">
+        <a href="../index.html" class="site-header__link">Главная</a>
+        <a href="catalog.html" class="site-header__link">Каталог</a>
+        <a href="product.html" class="site-header__link">Товар</a>
     </nav>
 </header>
 
-<main>
+<main style="display: flex; flex-direction: column; gap: 2rem;">
     <h1>Карточки товаров</h1>
 
     
-    <article>
-        <h2>Кроссовки New Balance</h2>
-        <img src="../images/new_balance.jpg" alt="Кроссовки New Balance" class="sneaker-img">
-        <p>Категория: <strong>Обувь</strong></p>
-        <p>Цена: <strong>25 000 ₽</strong></p>
-        <p>Качественные кроссовки New Balance с отличной амортизацией и стильным дизайном для повседневной носки.</p>
+    <article id="new-balance" class="product">
+        <div class="product__image-container">
+            <img src="../images/new_balance.jpg" alt="Кроссовки New Balance" class="product__image">
+        </div>
+        <div class="product__info">
+            <h2 class="product__title">Кроссовки New Balance</h2>
+            <p class="product__price">25 000 ₽</p>
+            <p>Качественные кроссовки New Balance с отличной амортизацией и стильным дизайном для повседневной носки.</p>
 
-        <h3>Характеристики</h3>
-        <table>
-            <tr>
-                <th>Характеристика</th>
-                <th>Значение</th>
-            </tr>
-            <tr>
-                <td>Наименование</td>
-                <td>Кроссовки New Balance</td>
-            </tr>
-            <tr>
-                <td>Категория</td>
-                <td>Обувь</td>
-            </tr>
-            <tr>
-                <td>Цвет</td>
-                <td>Белый</td>
-            </tr>
-            <tr>
-                <td>Цветовая палитра</td>
-                <td>Белый, Серый, Розовый, Коричневый</td>
-            </tr>
-            <tr>
-                <td>Цена</td>
-                <td>25 000 ₽</td>
-            </tr>
-        </table>
+            <div class="size-selector">
+                <span class="size-selector__title">Выберите размер (EUR):</span>
+                <div class="size-selector__list">
+                    <button type="button" class="size-selector__btn">37</button>
+                    <button type="button" class="size-selector__btn size-selector__btn--active">38</button>
+                    <button type="button" class="size-selector__btn">39</button>
+                    <button type="button" class="size-selector__btn">40</button>
+                </div>
+            </div>
 
-        <h3>Преимущества</h3>
-        <ul>
-            <li>Превосходная амортизация</li>
-            <li>Дышащие материалы</li>
-            <li>Удобная колодка для долгих прогулок</li>
-            <li>Стильный классический дизайн</li>
-        </ul>
+            <button type="button" class="btn">Добавить в корзину</button>
 
-        <p><a href="#">Добавить в корзину</a></p>
-        <p><a href="catalog.html">Вернуться в каталог</a></p>
+            <h3>Характеристики</h3>
+            <table class="product__table">
+                <thead><tr><th>Характеристика</th><th>Значение</th></tr></thead>
+                <tbody>
+                    <tr><td>Наименование</td><td>Кроссовки New Balance</td></tr>
+                    <tr><td>Категория</td><td>Обувь</td></tr>
+                    <tr><td>Цвет</td><td>Белый</td></tr>
+                    <tr><td>Палитра</td><td>Белый, Серый, Розовый, Коричневый</td></tr>
+                    <tr><td>Цена</td><td>25 000 ₽</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Преимущества</h3>
+            <ul class="product__list">
+                <li>Превосходная амортизация</li>
+                <li>Дышащие материалы</li>
+                <li>Удобная колодка для долгих прогулок</li>
+            </ul>
+        </div>
     </article>
 
     
-    <article>
-        <h2>Кроссовки Puma</h2>
-        <img src="../images/puma.jpg" alt="Кроссовки Puma" class="sneaker-img">
-        <p>Категория: <strong>Обувь</strong></p>
-        <p>Цена: <strong>35 000 ₽</strong></p>
-        <p>Легкие и удобные спортивные кроссовки Puma для активного отдыха и спортивных тренировок.</p>
+    <article id="tihohody" class="product">
+        <div class="product__image-container">
+            <img src="../images/arm.jpg" alt="Шлепанцы тихоходы" class="product__image">
+        </div>
+        <div class="product__info">
+            <h2 class="product__title">Шлепанцы тихоходы</h2>
+            <p class="product__price">25 000 ₽</p>
+            <p>Удобные и легкие шлепанцы тихоходы для максимального комфорта, отдыха и повседневной носки.</p>
 
-        <h3>Характеристики</h3>
-        <table>
-            <tr>
-                <th>Характеристика</th>
-                <th>Значение</th>
-            </tr>
-            <tr>
-                <td>Наименование</td>
-                <td>Кроссовки Puma</td>
-            </tr>
-            <tr>
-                <td>Категория</td>
-                <td>Обувь</td>
-            </tr>
-            <tr>
-                <td>Цветовая палитра</td>
-                <td>Белый, Черный, Розовый</td>
-            </tr>
-            <tr>
-                <td>Цена</td>
-                <td>35 000 ₽</td>
-            </tr>
-        </table>
+            <div class="size-selector">
+                <span class="size-selector__title">Выберите размер (EUR):</span>
+                <div class="size-selector__list">
+                    <button type="button" class="size-selector__btn">37</button>
+                    <button type="button" class="size-selector__btn">38</button>
+                    <button type="button" class="size-selector__btn size-selector__btn--active">39</button>
+                    <button type="button" class="size-selector__btn">40</button>
+                </div>
+            </div>
 
-        <h3>Преимущества</h3>
-        <ul>
-            <li>Эргономичная подошва</li>
-            <li>Износостойкие материалы</li>
-            <li>Легкость и комфорт при ходьбе</li>
-            <li>Современный спортивный дизайн</li>
-        </ul>
+            <button type="button" class="btn">Добавить в корзину</button>
 
-        <p><a href="#">Добавить в корзину</a></p>
-        <p><a href="catalog.html">Вернуться в каталог</a></p>
+            <h3>Характеристики</h3>
+            <table class="product__table">
+                <thead><tr><th>Характеристика</th><th>Значение</th></tr></thead>
+                <tbody>
+                    <tr><td>Наименование</td><td>Шлепанцы тихоходы</td></tr>
+                    <tr><td>Категория</td><td>Обувь</td></tr>
+                    <tr><td>Цвет</td><td>Черный</td></tr>
+                    <tr><td>Цена</td><td>25 000 ₽</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Преимущества</h3>
+            <ul class="product__list">
+                <li>Бесшумная мягкая подошва</li>
+                <li>Легкий и прочный материал</li>
+                <li>Эргономичная форма</li>
+            </ul>
+        </div>
+    </article>
+
+   
+    <article id="puma" class="product">
+        <div class="product__image-container">
+            <img src="../images/puma.jpg" alt="Кроссовки Puma" class="product__image">
+        </div>
+        <div class="product__info">
+            <h2 class="product__title">Кроссовки Puma</h2>
+            <p class="product__price">35 000 ₽</p>
+            <p>Легкие и удобные спортивные кроссовки Puma для активного отдыха и тренировок.</p>
+
+            <div class="size-selector">
+                <span class="size-selector__title">Выберите размер (EUR):</span>
+                <div class="size-selector__list">
+                    <button type="button" class="size-selector__btn">37</button>
+                    <button type="button" class="size-selector__btn size-selector__btn--active">38</button>
+                    <button type="button" class="size-selector__btn">39</button>
+                    <button type="button" class="size-selector__btn">40</button>
+                </div>
+            </div>
+
+            <button type="button" class="btn">Добавить в корзину</button>
+
+            <h3>Характеристики</h3>
+            <table class="product__table">
+                <thead><tr><th>Характеристика</th><th>Значение</th></tr></thead>
+                <tbody>
+                    <tr><td>Наименование</td><td>Кроссовки Puma</td></tr>
+                    <tr><td>Категория</td><td>Обувь</td></tr>
+                    <tr><td>Палитра</td><td>Белый, Черный, Розовый</td></tr>
+                    <tr><td>Цена</td><td>35 000 ₽</td></tr>
+                </tbody>
+            </table>
+        </div>
     </article>
 
     
-    <article>
-        <h2>Кроссовки Adidas</h2>
-        <img src="../images/adidas.jpg" alt="Кроссовки Adidas" class="sneaker-img">
-        <p>Категория: <strong>Обувь</strong></p>
-        <p>Цена: <strong>15 000 ₽</strong></p>
-        <p>Классические кроссовки Adidas, сочетающие надежность, универсальный стиль и невероятное удобство.</p>
+    <article id="adidas" class="product">
+        <div class="product__image-container">
+            <img src="../images/adidas.jpg" alt="Кроссовки Adidas" class="product__image">
+        </div>
+        <div class="product__info">
+            <h2 class="product__title">Кроссовки Adidas</h2>
+            <p class="product__price">15 000 ₽</p>
+            <p>Классические кроссовки Adidas, сочетающие надежность, универсальный стиль и удобство.</p>
 
-        <h3>Характеристики</h3>
-        <table>
-            <tr>
-                <th>Характеристика</th>
-                <th>Значение</th>
-            </tr>
-            <tr>
-                <td>Наименование</td>
-                <td>Кроссовки Adidas</td>
-            </tr>
-            <tr>
-                <td>Категория</td>
-                <td>Обувь</td>
-            </tr>
-            <tr>
-                <td>Цветовая палитра</td>
-                <td>Белый, Черный, Коричневый</td>
-            </tr>
-            <tr>
-                <td>Цена</td>
-                <td>15 000 ₽</td>
-            </tr>
-        </table>
+            <div class="size-selector">
+                <span class="size-selector__title">Выберите размер (EUR):</span>
+                <div class="size-selector__list">
+                    <button type="button" class="size-selector__btn">37</button>
+                    <button type="button" class="size-selector__btn">38</button>
+                    <button type="button" class="size-selector__btn size-selector__btn--active">39</button>
+                    <button type="button" class="size-selector__btn">40</button>
+                </div>
+            </div>
 
-        <h3>Преимущества</h3>
-        <ul>
-            <li>Фирменное качество и надежность</li>
-            <li>Отличная вентиляция</li>
-            <li>Универсальный стиль</li>
-            <li>Прочная подошва</li>
-        </ul>
+            <button type="button" class="btn">Добавить в корзину</button>
 
-        <p><a href="#">Добавить в корзину</a></p>
-        <p><a href="catalog.html">Вернуться в каталог</a></p>
+            <h3>Характеристики</h3>
+            <table class="product__table">
+                <thead><tr><th>Характеристика</th><th>Значение</th></tr></thead>
+                <tbody>
+                    <tr><td>Наименование</td><td>Кроссовки Adidas</td></tr>
+                    <tr><td>Категория</td><td>Обувь</td></tr>
+                    <tr><td>Палитра</td><td>Белый, Черный, Коричневый</td></tr>
+                    <tr><td>Цена</td><td>15 000 ₽</td></tr>
+                </tbody>
+            </table>
+        </div>
     </article>
 
     
-    <article>
-        <h2>Поло HENDERSON</h2>
-        <img src="../images/HENDERSON.jpg" alt="Поло HENDERSON" class="clothing-img">
-        <p>Категория: <strong>Мужская одежда</strong></p>
-        <p>Цена: <strong>15 000 ₽</strong></p>
-        <p>Элегантное мужское поло HENDERSON из высококачественного хлопка для повседневного и делового стиля.</p>
+    <article id="henderson-polo" class="product">
+        <div class="product__image-container">
+            <img src="../images/HENDERSON.jpg" alt="Поло HENDERSON" class="product__image">
+        </div>
+        <div class="product__info">
+            <h2 class="product__title">Поло HENDERSON</h2>
+            <p class="product__price">15 000 ₽</p>
+            <p>Элегантное мужское поло HENDERSON из высококачественного хлопка.</p>
 
-        <h3>Характеристики</h3>
-        <table>
-            <tr>
-                <th>Характеристика</th>
-                <th>Значение</th>
-            </tr>
-            <tr>
-                <td>Наименование</td>
-                <td>Поло HENDERSON</td>
-            </tr>
-            <tr>
-                <td>Категория</td>
-                <td>Мужская одежда</td>
-            </tr>
-            <tr>
-                <td>Цветовая палитра</td>
-                <td>Белый, Черный, Зеленый, Розовый, Коричневый</td>
-            </tr>
-            <tr>
-                <td>Цена</td>
-                <td>15 000 ₽</td>
-            </tr>
-        </table>
+            <div class="size-selector">
+                <span class="size-selector__title">Выберите размер:</span>
+                <div class="size-selector__list">
+                    <button type="button" class="size-selector__btn">S</button>
+                    <button type="button" class="size-selector__btn size-selector__btn--active">M</button>
+                    <button type="button" class="size-selector__btn">L</button>
+                    <button type="button" class="size-selector__btn">XL</button>
+                </div>
+            </div>
 
-        <h3>Преимущества</h3>
-        <ul>
-            <li>Натуральный дышащий хлопок</li>
-            <li>Приятный к телу материал</li>
-            <li>Идеальная посадка по фигуре</li>
-            <li>Устойчивость цвета при стирке</li>
-        </ul>
+            <button type="button" class="btn">Добавить в корзину</button>
 
-        <p><a href="#">Добавить в корзину</a></p>
-        <p><a href="catalog.html">Вернуться в каталог</a></p>
+            <h3>Характеристики</h3>
+            <table class="product__table">
+                <thead><tr><th>Характеристика</th><th>Значение</th></tr></thead>
+                <tbody>
+                    <tr><td>Наименование</td><td>Поло HENDERSON</td></tr>
+                    <tr><td>Категория</td><td>Мужская одежда</td></tr>
+                    <tr><td>Палитра</td><td>Белый, Черный, Зеленый, Розовый, Коричневый</td></tr>
+                    <tr><td>Цена</td><td>15 000 ₽</td></tr>
+                </tbody>
+            </table>
+        </div>
     </article>
 
     
-    <article>
-        <h2>Майка HENDERSON</h2>
-        <img src="../images/HENDERSON2.jpg" alt="Майка HENDERSON" class="clothing-img">
-        <p>Категория: <strong>Мужская одежда</strong></p>
-        <p>Цена: <strong>32 000 ₽</strong></p>
-        <p>Комфортная и стильная мужская майка HENDERSON базового гардероба на каждый день.</p>
+    <article id="henderson-singlet" class="product">
+        <div class="product__image-container">
+            <img src="../images/HENDERSON2.jpg" alt="Майка HENDERSON" class="product__image">
+        </div>
+        <div class="product__info">
+            <h2 class="product__title">Майка HENDERSON</h2>
+            <p class="product__price">32 000 ₽</p>
+            <p>Комфортная и стильная мужская майка HENDERSON базового гардероба на каждый день.</p>
 
-        <h3>Характеристики</h3>
-        <table>
-            <tr>
-                <th>Характеристика</th>
-                <th>Значение</th>
-            </tr>
-            <tr>
-                <td>Наименование</td>
-                <td>Майка HENDERSON</td>
-            </tr>
-            <tr>
-                <td>Категория</td>
-                <td>Мужская одежда</td>
-            </tr>
-            <tr>
-                <td>Цветовая палитра</td>
-                <td>Белый, Черный, Зеленый, Розовый, Коричневый</td>
-            </tr>
-            <tr>
-                <td>Цена</td>
-                <td>32 000 ₽</td>
-            </tr>
-        </table>
+            <div class="size-selector">
+                <span class="size-selector__title">Выберите размер:</span>
+                <div class="size-selector__list">
+                    <button type="button" class="size-selector__btn">S</button>
+                    <button type="button" class="size-selector__btn size-selector__btn--active">M</button>
+                    <button type="button" class="size-selector__btn">L</button>
+                    <button type="button" class="size-selector__btn">XL</button>
+                </div>
+            </div>
 
-        <h3>Преимущества</h3>
-        <ul>
-            <li>Легкая и мягкая ткань</li>
-            <li>Максимальная свобода движений</li>
-            <li>Прочные аккуратные швы</li>
-            <li>Универсальность в базовом гардеробе</li>
-        </ul>
+            <button type="button" class="btn">Добавить в корзину</button>
 
-        <p><a href="#">Добавить в корзину</a></p>
-        <p><a href="catalog.html">Вернуться в каталог</a></p>
+            <h3>Характеристики</h3>
+            <table class="product__table">
+                <thead><tr><th>Характеристика</th><th>Значение</th></tr></thead>
+                <tbody>
+                    <tr><td>Наименование</td><td>Майка HENDERSON</td></tr>
+                    <tr><td>Категория</td><td>Мужская одежда</td></tr>
+                    <tr><td>Палитра</td><td>Белый, Черный, Зеленый, Розовый, Коричневый</td></tr>
+                    <tr><td>Цена</td><td>32 000 ₽</td></tr>
+                </tbody>
+            </table>
+        </div>
     </article>
 
     
-    <article>
-        <h2>Платье CHANEL</h2>
-        <img src="../images/CHANEL.jpg" alt="Платье CHANEL" class="clothing-img">
-        <p>Категория: <strong>Женская одежда</strong></p>
-        <p>Цена: <strong>132 000 ₽</strong></p>
-        <p>Роскошное платье CHANEL высочайшего качества для особых случаев и создания премиального образа.</p>
+    <article id="chanel-dress" class="product">
+        <div class="product__image-container">
+            <img src="../images/CHANEL.jpg" alt="Платье CHANEL" class="product__image">
+        </div>
+        <div class="product__info">
+            <h2 class="product__title">Платье CHANEL</h2>
+            <p class="product__price">132 000 ₽</p>
+            <p>Роскошное платье CHANEL высочайшего качества для особых случаев и премиального образа.</p>
 
-        <h3>Характеристики</h3>
-        <table>
-            <tr>
-                <th>Характеристика</th>
-                <th>Значение</th>
-            </tr>
-            <tr>
-                <td>Наименование</td>
-                <td>Платье CHANEL</td>
-            </tr>
-            <tr>
-                <td>Категория</td>
-                <td>Женская одежда</td>
-            </tr>
-            <tr>
-                <td>Цветовая палитра</td>
-                <td>Белый, Черный, Зеленый, Розовый, Коричневый</td>
-            </tr>
-            <tr>
-                <td>Цена</td>
-                <td>132 000 ₽</td>
-            </tr>
-        </table>
+            <div class="size-selector">
+                <span class="size-selector__title">Выберите размер:</span>
+                <div class="size-selector__list">
+                    <button type="button" class="size-selector__btn">XS</button>
+                    <button type="button" class="size-selector__btn size-selector__btn--active">S</button>
+                    <button type="button" class="size-selector__btn">M</button>
+                </div>
+            </div>
 
-        <h3>Преимущества</h3>
-        <ul>
-            <li>Премиальный дизайн и эксклюзивный крой</li>
-            <li>Высококачественная ткань</li>
-            <li>Элегантный и утонченный стиль</li>
-            <li>Идеальная посадка по фигуре</li>
-        </ul>
+            <button type="button" class="btn">Добавить в корзину</button>
 
-        <p><a href="#">Добавить в корзину</a></p>
-        <p><a href="catalog.html">Вернуться в каталог</a></p>
+            <h3>Характеристики</h3>
+            <table class="product__table">
+                <thead><tr><th>Характеристика</th><th>Значение</th></tr></thead>
+                <tbody>
+                    <tr><td>Наименование</td><td>Платье CHANEL</td></tr>
+                    <tr><td>Категория</td><td>Женская одежда</td></tr>
+                    <tr><td>Палитра</td><td>Белый, Черный, Зеленый, Розовый, Коричневый</td></tr>
+                    <tr><td>Цена</td><td>132 000 ₽</td></tr>
+                </tbody>
+            </table>
+        </div>
     </article>
 
     
-    <article>
-        <h2>Свит-шот Zarina</h2>
-        <img src="../images/ZARINA.jpg" alt="Свит-шот Zarina" class="clothing-img">
-        <p>Категория: <strong>Женская одежда</strong></p>
-        <p>Цена: <strong>102 350 ₽</strong></p>
-        <p>Уютный женский свитшот Zarina из мягкого материала для создания современных стильных образов.</p>
+    <article id="zarina-sweatshirt" class="product">
+        <div class="product__image-container">
+            <img src="../images/ZARINA.jpg" alt="Свит-шот Zarina" class="product__image">
+        </div>
+        <div class="product__info">
+            <h2 class="product__title">Свит-шот Zarina</h2>
+            <p class="product__price">102 350 ₽</p>
+            <p>Уютный женский свитшот Zarina из мягкого материала для создания современных стильных образов.</p>
 
-        <h3>Характеристики</h3>
-        <table>
-            <tr>
-                <th>Характеристика</th>
-                <th>Значение</th>
-            </tr>
-            <tr>
-                <td>Наименование</td>
-                <td>Свит-шот Zarina</td>
-            </tr>
-            <tr>
-                <td>Категория</td>
-                <td>Женская одежда</td>
-            </tr>
-            <tr>
-                <td>Цветовая палитра</td>
-                <td>Белый, Черный, Розовый, Коричневый</td>
-            </tr>
-            <tr>
-                <td>Цена</td>
-                <td>102 350 ₽</td>
-            </tr>
-        </table>
+            <div class="size-selector">
+                <span class="size-selector__title">Выберите размер:</span>
+                <div class="size-selector__list">
+                    <button type="button" class="size-selector__btn">S</button>
+                    <button type="button" class="size-selector__btn size-selector__btn--active">M</button>
+                    <button type="button" class="size-selector__btn">L</button>
+                </div>
+            </div>
 
-        <h3>Преимущества</h3>
-        <ul>
-            <li>Мягкая и приятная на ощупь ткань</li>
-            <li>Сохраняет тепло и комфорт</li>
-            <li>Актуальный современный крой</li>
-            <li>Простой уход и износостойкость</li>
-        </ul>
+            <button type="button" class="btn">Добавить в корзину</button>
 
-        <p><a href="#">Добавить в корзину</a></p>
-        <p><a href="catalog.html">Вернуться в каталог</a></p>
+            <h3>Характеристики</h3>
+            <table class="product__table">
+                <thead><tr><th>Характеристика</th><th>Значение</th></tr></thead>
+                <tbody>
+                    <tr><td>Наименование</td><td>Свит-шот Zarina</td></tr>
+                    <tr><td>Категория</td><td>Женская одежда</td></tr>
+                    <tr><td>Палитра</td><td>Белый, Черный, Розовый, Коричневый</td></tr>
+                    <tr><td>Цена</td><td>102 350 ₽</td></tr>
+                </tbody>
+            </table>
+        </div>
     </article>
-
-    
-    <article>
-        <h2>Шлепанцы тихоходы</h2>
-        <img src="../images/arm.jpg" alt="Шлепанцы тихоходы" class="sneaker-img">
-        <p>Категория: <strong>Обувь</strong></p>
-        <p>Цена: <strong>228 067 ₽</strong></p>
-        <p>Удобные и легкие шлепанцы тихоходы для максимального комфорта, отдыха и повседневной носки.</p>
-
-        <h3>Характеристики</h3>
-        <table>
-            <tr>
-                <th>Характеристика</th>
-                <th>Значение</th>
-            </tr>
-            <tr>
-                <td>Наименование</td>
-                <td>Шлепанцы тихоходы</td>
-            </tr>
-            <tr>
-                <td>Категория</td>
-                <td>Обувь</td>
-            </tr>
-            <tr>
-                <td>Цвет</td>
-                <td>Черный</td>
-            </tr>
-            <tr>
-                <td>Размеры</td>
-                <td>37, 38, 39, 40</td>
-            </tr>
-            <tr>
-                <td>Цена</td>
-                <td>228 067 ₽</td>
-            </tr>
-        </table>
-
-        <h3>Преимущества</h3>
-        <ul>
-            <li>Бесшумная мягкая подошва</li>
-            <li>Легкий и прочный износостойкий материал</li>
-            <li>Эргономичная форма для снятия усталости ног</li>
-            <li>Устойчивость к скольжению</li>
-        </ul>
-
-        <p><a href="#">Добавить в корзину</a></p>
-        <p><a href="catalog.html">Вернуться в каталог</a></p>
-    </article>
-
-    
-    
 
 </main>
 
-<footer>
+<footer class="site-footer">
+    <img src="../images/kotost.jpg" alt="Котость" class="sneaker-img">
     <p>© 2026 Потеряный башмак</p>
-    <p>Интернет-магазин брендовой одежды</p>
+    <p>Интернет-магазин брендовой одежды и обуви</p>
 </footer>
-
 
 </body>
 </html>
