@@ -1,0 +1,570 @@
+/* ==========================================================================
+   Потеряный башмак — единый файл стилей (ЛР2: адаптивная CSS3-вёрстка)
+   Вариант 3. Индивидуальное задание: переключатель размеров на Flexbox.
+   ========================================================================== */
+
+/* ---------- Шрифты ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+
+/* ---------- Дизайн-токены (CSS-переменные) ---------- */
+:root {
+  /* Цвета: тема "мастерская сапожника" — тёмно-синий, крафтовая бумага, горчичный акцент */
+  --color-ink: #1c2430;
+  --color-ink-soft: #4b5568;
+  --color-paper: #f5f0e4;
+  --color-surface: #ffffff;
+  --color-line: #e2d8c3;
+  --color-mustard: #d98f2b;
+  --color-mustard-dark: #b06f1a;
+  --color-rust: #a23e2b;
+  --color-rust-soft: #f3ded6;
+
+  /* Типографика */
+  --font-display: 'Unbounded', 'Arial Narrow', sans-serif;
+  --font-body: 'Manrope', 'Segoe UI', Arial, sans-serif;
+
+  /* Отступы */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+
+  /* Скругления, тени, анимации */
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --shadow-card: 0 10px 24px rgba(28, 36, 48, 0.10);
+  --shadow-card-hover: 0 16px 32px rgba(28, 36, 48, 0.16);
+  --transition-base: 200ms ease;
+  --content-width: 1180px;
+}
+
+/* ---------- Сброс и базовые стили ---------- */
+* ,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 0;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-paper);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: 1.25;
+  margin: 0 0 var(--space-sm);
+}
+
+h1 { font-size: clamp(1.6rem, 1.1rem + 2vw, 2.5rem); }
+h2 { font-size: clamp(1.3rem, 1rem + 1.2vw, 1.8rem); }
+h3 { font-size: 1.05rem; letter-spacing: 0.01em; }
+
+p { margin: 0 0 var(--space-sm); max-width: 68ch; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: inherit; }
+
+ul { margin: 0; padding: 0; list-style: none; }
+
+table { border-collapse: collapse; width: 100%; }
+
+.container {
+  width: 100%;
+  max-width: var(--content-width);
+  margin-inline: auto;
+  padding-inline: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .container { padding-inline: var(--space-lg); }
+}
+
+/* ---------- Кнопки ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  padding: 0.7em 1.4em;
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform var(--transition-base), box-shadow var(--transition-base),
+              background-color var(--transition-base), color var(--transition-base);
+}
+
+.btn--primary {
+  background: var(--color-mustard);
+  color: var(--color-ink);
+}
+
+.btn--primary:hover {
+  background: var(--color-mustard-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.btn--outline {
+  background: transparent;
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+}
+
+.btn--outline:hover {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  transform: translateY(-2px);
+}
+
+.btn:active { transform: translateY(0) scale(0.97); }
+
+.btn:focus-visible,
+a:focus-visible,
+.size-switcher__pill:focus-visible {
+  outline: 3px solid var(--color-mustard-dark);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Шапка сайта (Flexbox)
+   ========================================================================== */
+.site-header {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 3px solid var(--color-mustard);
+}
+
+.site-header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xs) var(--space-md);
+  padding-block: var(--space-sm);
+}
+
+.site-header__logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: var(--color-paper);
+  letter-spacing: 0.01em;
+}
+
+.site-header__logo::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 0.5em;
+  border-radius: 50%;
+  background: var(--color-mustard);
+}
+
+.site-header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.site-header__link {
+  text-decoration: none;
+  color: var(--color-paper);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition-base), border-color var(--transition-base);
+}
+
+.site-header__link:hover {
+  color: var(--color-mustard);
+  border-color: var(--color-mustard);
+}
+
+.site-header__link--active {
+  color: var(--color-mustard);
+  border-color: var(--color-mustard);
+}
+
+/* ==========================================================================
+   Главная страница — hero и категории
+   ========================================================================== */
+.hero {
+  padding-block: var(--space-xl) var(--space-lg);
+}
+
+.hero__text {
+  color: var(--color-ink-soft);
+}
+
+.categories {
+  padding-block: var(--space-lg) var(--space-xl);
+}
+
+.categories__title {
+  margin-bottom: var(--space-md);
+}
+
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--space-md);
+}
+
+.category-card {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.category-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: var(--color-mustard);
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.category-card__title { margin-bottom: var(--space-xs); }
+
+.category-card__text {
+  color: var(--color-ink-soft);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   "Хайп"-баннер (гиф) на странице товаров
+   ========================================================================== */
+.hype-banner {
+  margin: 0 0 var(--space-lg);
+  padding: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  background: var(--color-surface);
+  border: 1px dashed var(--color-line);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.hype-banner__gif {
+  width: 220px;
+  border-radius: var(--radius-sm);
+}
+
+.hype-banner__caption {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+}
+
+/* ==========================================================================
+   Каталог — сетка CSS Grid (1 → 2 → 4 колонки)
+   ========================================================================== */
+.catalog-intro {
+  padding-block: var(--space-lg) var(--space-md);
+}
+
+.catalog__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  padding-bottom: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .catalog__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1100px) {
+  .catalog__grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.product-tile {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.product-tile:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.product-tile__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.product-tile__body {
+  padding: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex-grow: 1;
+}
+
+.product-tile__title {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.product-tile__meta {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+
+.product-tile__price {
+  margin: 0.4rem 0 0.6rem;
+  font-weight: 700;
+  color: var(--color-rust);
+}
+
+.product-tile__link {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* ==========================================================================
+   Карточка товара (mobile-first, строка с 768px)
+   ========================================================================== */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .product-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .product-card__media {
+    flex: 0 0 38%;
+  }
+
+  .product-card__body {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+.product-card__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.product-card__title {
+  position: relative;
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.product-card__title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 46px;
+  height: 3px;
+  background: var(--color-mustard);
+}
+
+.product-card__price strong { color: var(--color-rust); }
+
+.product-card__desc { color: var(--color-ink-soft); }
+
+.product-card__subtitle {
+  margin-top: var(--space-md);
+}
+
+.product-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+/* ---------- Переключатель размеров (Flexbox, индивидуальное задание) ---------- */
+.size-switcher {
+  margin: var(--space-sm) 0;
+}
+
+.size-switcher__label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+  margin-bottom: 0.5rem;
+}
+
+.size-switcher__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.size-switcher__input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.size-switcher__pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.6em;
+  padding: 0.45em 0.6em;
+  border: 2px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  color: var(--color-ink);
+  cursor: pointer;
+  transition: transform var(--transition-base), border-color var(--transition-base),
+              background-color var(--transition-base), color var(--transition-base);
+}
+
+.size-switcher__pill:hover {
+  border-color: var(--color-mustard);
+  transform: translateY(-2px);
+}
+
+.size-switcher__input:checked + .size-switcher__pill {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-mustard);
+}
+
+/* ---------- Таблица характеристик (зебра) ---------- */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.spec-table {
+  font-size: 0.92rem;
+  min-width: 320px;
+}
+
+.spec-table th {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  text-align: left;
+  padding: 0.6em 0.8em;
+  font-weight: 600;
+}
+
+.spec-table td {
+  padding: 0.6em 0.8em;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.spec-table tr:nth-child(even) { background: var(--color-paper); }
+.spec-table tr:nth-child(odd)  { background: var(--color-surface); }
+
+/* ---------- Список преимуществ ---------- */
+.advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.advantages__item {
+  position: relative;
+  padding-left: 1.4em;
+  color: var(--color-ink-soft);
+}
+
+.advantages__item::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-mustard-dark);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Подвал
+   ========================================================================== */
+.site-footer {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  margin-top: var(--space-xl);
+}
+
+.site-footer .container {
+  padding-block: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  text-align: center;
+}
+
+.site-footer__mascot {
+  width: 96px;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-paper);
+  opacity: 0.85;
+}
+
+/* ---------- Уважение к настройкам пользователя ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
