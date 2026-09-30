@@ -3,60 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная — Потеряный башмак</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Потеряный башмак — интернет-магазин обуви и одежды</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <header class="site-header">
-    <div class="site-header__logo">
-        <a href="index.html" class="site-header__link">Потеряный башмак</a>
+    <div class="container">
+        <div>
+            <a href="index.html" class="site-header__logo">Потеряный башмак</a>
+        </div>
+
+        <nav class="site-header__nav">
+            <a href="index.html" class="site-header__link site-header__link--active">Главная</a>
+            <a href="pages/catalog.html" class="site-header__link">Каталог</a>
+            <a href="pages/product.html" class="site-header__link">Товар</a>
+        </nav>
     </div>
-    <nav class="site-header__nav">
-        <a href="index.html" class="site-header__link">Главная</a>
-        <a href="pages/catalog.html" class="site-header__link">Каталог</a>
-        <a href="pages/product.html" class="site-header__link">Товар</a>
-    </nav>
 </header>
 
 <main>
     <section class="hero">
-        <h1 class="hero__title">Добро пожаловать в магазин брендовой одежды и обуви «Потеряный башмак»!</h1>
-        <p class="hero__description">
-            Современный интернет-магазин, в котором можно найти обувь и одежду на любой вкус по выгодным ценам.
-        </p>
-        <a href="pages/catalog.html" class="btn">Перейти в каталог</a>
+        <div class="container">
+            <h1>Добро пожаловать в магазин брендовой одежды Потеряный башмак!</h1>
+            <p class="hero__text">
+                Магазин обуви Потеряный башмак — современный интернет-магазин,
+                в котором можно найти обувь на любой вкус и цвет и по выгодным ценам.
+            </p>
+            <p class="hero__text">
+                Выберите нужную категорию или перейдите
+                в каталог, чтобы посмотреть все товары.
+            </p>
+            <a href="pages/catalog.html" class="btn btn--primary">
+                Перейти в каталог
+            </a>
+        </div>
     </section>
 
     <section class="categories">
-        <h2 class="categories__title">Категории товаров</h2>
-        <div class="categories__grid">
-            <article class="card">
-                <h3 class="card__title">Обувь</h3>
-                <p class="card__info">Разнообразная брендовая обувь по выгодным ценам.</p>
-                <a href="pages/catalog.html" class="btn card__btn">Смотреть товары</a>
-            </article>
+        <div class="container">
+            <h2 class="categories__title">Категории товаров</h2>
 
-            <article class="card">
-                <h3 class="card__title">Мужская одежда</h3>
-                <p class="card__info">Футболки, рубашки поло, худи, свитшоты и аксессуары.</p>
-                <a href="pages/catalog.html" class="btn card__btn">Смотреть товары</a>
-            </article>
+            <div class="categories__grid">
+                <article class="category-card">
+                    <h3 class="category-card__title">Обувь</h3>
+                    <p class="category-card__text">
+                        В данной категории вы можете выбрать себе разнообразную брендовую обувь по выгодным ценам.
+                    </p>
+                    <a href="pages/catalog.html" class="btn btn--outline">
+                        Смотреть товары
+                    </a>
+                </article>
 
-            <article class="card">
-                <h3 class="card__title">Женская одежда</h3>
-                <p class="card__info">Элегантная женская одежда брендовых производителей.</p>
-                <a href="pages/catalog.html" class="btn card__btn">Смотреть товары</a>
-            </article>
+                <article class="category-card">
+                    <h3 class="category-card__title">Мужская одежда</h3>
+                    <p class="category-card__text">
+                        В данной категории вы можете выбрать брендовую мужскую одежду по выгодным ценам.
+                        Футболки, рубашки поло, худи и свитшоты, майки и боксеры, ремни.
+                    </p>
+                    <a href="pages/catalog.html" class="btn btn--outline">
+                        Смотреть товары
+                    </a>
+                </article>
+
+                <article class="category-card">
+                    <h3 class="category-card__title">Женская одежда</h3>
+                    <p class="category-card__text">
+                        В данной категории вы можете выбрать брендовую мужскую одежду по выгодным ценам.
+                    </p>
+                    <a href="pages/catalog.html" class="btn btn--outline">
+                        Смотреть товары
+                    </a>
+                </article>
+            </div>
         </div>
     </section>
 </main>
 
 <footer class="site-footer">
-    <img src="images/kotost.jpg" alt="Логотип Потеряный башмак">
-    <p>© 2026 Потеряный башмак</p>
-    <p>Интернет-магазин брендовой одежды и обуви</p>
+    <div class="container">
+        <img src="images/kotost.jpg" alt="Котость" class="site-footer__mascot">
+        <p>© 2026 Потеряный башмак</p>
+        <p>Интернет-магазин брендовой одежды</p>
+    </div>
 </footer>
-
 </body>
 </html>
