@@ -1,8 +1,14 @@
+/* ==========================================================================
+   Потеряный башмак — единый файл стилей (ЛР2: адаптивная CSS3-вёрстка)
+   Вариант 3. Индивидуальное задание: переключатель размеров на Flexbox.
 
+   Шрифты (Google Fonts): PT Sans (ParaType) — основной, Shafarik — подключён дополнительно.
+   https://fonts.google.com/specimen/PT+Sans
+   ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Shafarik&display=swap');
 
-
+/* Готовые классы начертаний PT Sans (подставляются в class="..." при необходимости) */
 .pt-sans-regular {
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
@@ -27,13 +33,14 @@
   font-style: italic;
 }
 
-
+/* ---------- CSS-переменные ---------- */
 :root {
-  --color-ink: #22293a;      
-  --color-bg: #f4f2ec;       
-  --color-surface: #ffffff;  
-  --color-muted: #5b6270;    
-  --color-accent: #c98a2e;   
+  --color-ink: #22293a;      /* текст, шапка, подвал */
+  --color-bg: #f4f2ec;       /* фон страницы */
+  --color-surface: #ffffff;  /* фон карточек */
+  --color-line: #d9d3c4;     /* границы */
+  --color-muted: #5b6270;    /* второстепенный текст */
+  --color-accent: #c98a2e;   /* единственный акцентный цвет */
   --color-accent-dark: #a5701f;
 
   --font-main: 'PT Sans', Arial, sans-serif;
@@ -48,7 +55,7 @@
   --content-width: 1180px;
 }
 
-
+/* ---------- Сброс и база ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
@@ -77,7 +84,7 @@ table { border-collapse: collapse; width: 100%; }
   padding-inline: var(--space-sm);
 }
 
-
+/* ---------- Кнопки ---------- */
 .btn {
   display: inline-block;
   font-family: var(--font-main);
@@ -101,7 +108,9 @@ table { border-collapse: collapse; width: 100%; }
 
 .btn:focus-visible, a:focus-visible { outline: 2px solid var(--color-accent-dark); outline-offset: 2px; }
 
-
+/* ==========================================================================
+   Шапка (Flexbox)
+   ========================================================================== */
 .site-header {
   background: var(--color-ink);
   border-bottom: 3px solid var(--color-accent);
@@ -140,7 +149,9 @@ table { border-collapse: collapse; width: 100%; }
   border-color: var(--color-accent);
 }
 
-
+/* ==========================================================================
+   Главная — hero и категории
+   ========================================================================== */
 .hero { padding-block: var(--space-lg); }
 .hero__text { color: var(--color-muted); max-width: 60ch; }
 
@@ -169,7 +180,9 @@ table { border-collapse: collapse; width: 100%; }
 .category-card__title { margin-bottom: var(--space-xs); }
 .category-card__text { color: var(--color-muted); font-size: 0.95rem; }
 
-
+/* ==========================================================================
+   Каталог — CSS Grid (1 → 2 → 4 колонки)
+   ========================================================================== */
 .catalog-intro { padding-block: var(--space-md); }
 
 .catalog__grid {
@@ -209,8 +222,9 @@ table { border-collapse: collapse; width: 100%; }
 .product-tile__price { margin: 0.4rem 0 0.6rem; font-weight: 700; color: var(--color-accent-dark); }
 .product-tile__link { margin-top: auto; align-self: flex-start; }
 
-
-   
+/* ==========================================================================
+   Карточка товара (mobile-first, строка с 768px)
+   ========================================================================== */
 .product-card {
   display: flex;
   flex-direction: column;
@@ -250,7 +264,7 @@ table { border-collapse: collapse; width: 100%; }
   margin-top: var(--space-md);
 }
 
-
+/* ---------- Переключатель размеров (Flexbox, индивидуальное задание) ---------- */
 .size-switcher { margin: var(--space-sm) 0; }
 
 .size-switcher__label {
@@ -298,7 +312,7 @@ table { border-collapse: collapse; width: 100%; }
   outline-offset: 2px;
 }
 
-
+/* ---------- Таблица характеристик (зебра) ---------- */
 .table-scroll { width: 100%; overflow-x: auto; }
 .spec-table { font-size: 0.92rem; min-width: 320px; }
 
@@ -314,7 +328,7 @@ table { border-collapse: collapse; width: 100%; }
 .spec-table tr:nth-child(even) { background: var(--color-bg); }
 .spec-table tr:nth-child(odd)  { background: var(--color-surface); }
 
-
+/* ---------- Список преимуществ ---------- */
 .advantages { display: flex; flex-direction: column; gap: 0.4rem; }
 
 .advantages__item {
@@ -331,7 +345,9 @@ table { border-collapse: collapse; width: 100%; }
   font-weight: 700;
 }
 
-
+/* ==========================================================================
+   Подвал
+   ========================================================================== */
 .site-footer { background: var(--color-ink); margin-top: var(--space-lg); }
 
 .site-footer .container {
