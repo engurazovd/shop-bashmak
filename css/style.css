@@ -222,7 +222,6 @@ table { border-collapse: collapse; width: 100%; }
 .product-card__image { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); }
 
 .product-card__title {
-  position: relative;
   padding-bottom: var(--space-xs);
   margin-bottom: var(--space-sm);
   border-bottom: 3px solid var(--color-accent);
