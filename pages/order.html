@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа — Потеряный башмак</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container">
+        <div>
+            <a href="../index.html" class="site-header__logo">Потеряный башмак</a>
+        </div>
+
+        <nav class="site-header__nav">
+            <a href="../index.html" class="site-header__link">Главная</a>
+            <a href="catalog.html" class="site-header__link">Каталог</a>
+            <a href="product.html" class="site-header__link">Товар</a>
+            <a href="order.html" class="site-header__link site-header__link--active">Оформление заказа</a>
+            <a href="registration.html" class="site-header__link">Регистрация</a>
+            <a href="login.html" class="site-header__link">Вход</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-form">
+        <div class="container">
+            <h1>Оформление заказа</h1>
+            <p class="page-form__lead">
+                Заполните форму, и мы свяжемся с вами для подтверждения заказа.
+                Выбрать товар можно и в <a href="catalog.html">каталоге</a>.
+            </p>
+
+            <form class="form form--wide" action="../index.html" method="get">
+
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Контактные данные</legend>
+                    <div class="form__grid">
+                        <div class="form__row">
+                            <label class="form__label" for="first-name">Имя</label>
+                            <input class="form__input" type="text" id="first-name" name="first-name"
+                                   placeholder="Имя" required minlength="2" autocomplete="given-name">
+                        </div>
+                        <div class="form__row">
+                            <label class="form__label" for="last-name">Фамилия</label>
+                            <input class="form__input" type="text" id="last-name" name="last-name"
+                                   placeholder="Фамилия" required minlength="2" autocomplete="family-name">
+                        </div>
+                        <div class="form__row">
+                            <label class="form__label" for="phone">Телефон</label>
+                            <input class="form__input" type="tel" id="phone" name="phone"
+                                   placeholder="+7 900 000-00-00" required
+                                   pattern="[+]?[0-9\s()\-]{10,18}" autocomplete="tel">
+                        </div>
+                        <div class="form__row">
+                            <label class="form__label" for="email">Электронная почта</label>
+                            <input class="form__input" type="email" id="email" name="email"
+                                   placeholder="name@example.com" required autocomplete="email">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Заказ</legend>
+
+                    <div class="form__row">
+                        <label class="form__label" for="product">Товар</label>
+                        <select class="form__select" id="product" name="product" required>
+                            <option value="">Выберите товар</option>
+                            <optgroup label="Обувь">
+                                <option value="new-balance">Кроссовки New Balance — 25 000 ₽</option>
+                                <option value="puma">Кроссовки Puma — 35 000 ₽</option>
+                                <option value="adidas">Кроссовки Adidas — 15 000 ₽</option>
+                                <option value="tihohod">Шлепанцы тихоходы — 25 000 ₽</option>
+                            </optgroup>
+                            <optgroup label="Мужская одежда">
+                                <option value="henderson-polo">Поло HENDERSON — 15 000 ₽</option>
+                                <option value="henderson-tank">Майка HENDERSON — 32 000 ₽</option>
+                            </optgroup>
+                            <optgroup label="Женская одежда">
+                                <option value="chanel">Платье CHANEL — 132 000 ₽</option>
+                                <option value="zarina">Свит-шот Zarina — 102 350 ₽</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="form__grid">
+                        <div class="form__row">
+                            <label class="form__label" for="size">Размер</label>
+                            <select class="form__select" id="size" name="size" required>
+                                <option value="">Выберите размер</option>
+                                <optgroup label="Обувь">
+                                    <option value="37">37</option>
+                                    <option value="38">38</option>
+                                    <option value="39">39</option>
+                                    <option value="40">40</option>
+                                </optgroup>
+                                <optgroup label="Одежда">
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="form__row">
+                            <label class="form__label" for="color">Цвет</label>
+                            <select class="form__select" id="color" name="color" required>
+                                <option value="">Выберите цвет</option>
+                                <option value="white">Белый</option>
+                                <option value="black">Чёрный</option>
+                                <option value="gray">Серый</option>
+                                <option value="pink">Розовый</option>
+                                <option value="green">Зелёный</option>
+                                <option value="brown">Коричневый</option>
+                            </select>
+                        </div>
+                        <div class="form__row">
+                            <label class="form__label" for="quantity">Количество</label>
+                            <input class="form__input" type="number" id="quantity" name="quantity"
+                                   min="1" max="10" value="1" required>
+                            <p class="form__hint">От 1 до 10 штук.</p>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Доставка</legend>
+
+                    <div class="form__grid">
+                        <div class="form__row">
+                            <label class="form__label" for="city">Город</label>
+                            <input class="form__input" type="text" id="city" name="city"
+                                   placeholder="Например, Москва" required minlength="2" autocomplete="address-level2">
+                        </div>
+                        <div class="form__row">
+                            <label class="form__label" for="postal-code">Индекс</label>
+                            <input class="form__input" type="text" id="postal-code" name="postal-code"
+                                   placeholder="430000" pattern="[0-9]{6}" maxlength="6" inputmode="numeric"
+                                   autocomplete="postal-code">
+                        </div>
+                    </div>
+
+                    <div class="form__row">
+                        <label class="form__label" for="address">Адрес</label>
+                        <input class="form__input" type="text" id="address" name="address"
+                               placeholder="Улица, дом, квартира" required minlength="5" autocomplete="street-address">
+                    </div>
+
+                    <div class="form__row">
+                        <label class="form__label" for="delivery-date">Желаемая дата доставки</label>
+                        <input class="form__input" type="date" id="delivery-date" name="delivery-date">
+                    </div>
+
+                    <p class="form__label">Способ доставки</p>
+                    <div class="form__choices">
+                        <label class="form__choice">
+                            <input type="radio" name="delivery" value="courier" checked>
+                            Курьером
+                        </label>
+                        <label class="form__choice">
+                            <input type="radio" name="delivery" value="pickup">
+                            Пункт выдачи
+                        </label>
+                        <label class="form__choice">
+                            <input type="radio" name="delivery" value="post">
+                            Почта
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Оплата</legend>
+
+                    <p class="form__label">Способ оплаты</p>
+                    <div class="form__choices">
+                        <label class="form__choice">
+                            <input type="radio" name="payment" value="card" checked>
+                            Банковская карта
+                        </label>
+                        <label class="form__choice">
+                            <input type="radio" name="payment" value="cash">
+                            При получении
+                        </label>
+                    </div>
+
+                    <div class="form__row">
+                        <label class="form__label" for="promo">Промокод</label>
+                        <input class="form__input" type="text" id="promo" name="promo"
+                               placeholder="Введите промокод" maxlength="20">
+                    </div>
+                </fieldset>
+
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Дополнительная информация</legend>
+                    <div class="form__row">
+                        <label class="form__label" for="comment">Комментарий к заказу</label>
+                        <textarea class="form__textarea" id="comment" name="comment"
+                                  placeholder="Например: позвонить за час до доставки" maxlength="500"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Подтверждение</legend>
+                    <label class="form__choice form__choice--block">
+                        <input type="checkbox" name="confirm" value="yes" required>
+                        Я проверил(а) данные и подтверждаю заказ
+                    </label>
+                </fieldset>
+
+                <div class="form__actions">
+                    <button type="submit" class="btn btn--primary">Оформить заказ</button>
+                    <button type="reset" class="btn btn--outline">Очистить форму</button>
+                </div>
+                <p class="form__link">Ещё нет аккаунта? <a href="registration.html">Зарегистрироваться</a></p>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Предвыбор товара, если пришли с карточки товара: order.html?product=puma
+        var id = new URLSearchParams(location.search).get('product');
+        var select = document.getElementById('product');
+        if (id && select.querySelector('option[value="' + id + '"]')) select.value = id;
+    </script>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <img src="../images/kotost.jpg" alt="Котость" class="site-footer__mascot">
+        <p>© 2026 Потеряный башмак</p>
+        <p>Интернет-магазин брендовой одежды</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация — Потеряный башмак</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container">
+        <div>
+            <a href="../index.html" class="site-header__logo">Потеряный башмак</a>
+        </div>
+
+        <nav class="site-header__nav">
+            <a href="../index.html" class="site-header__link">Главная</a>
+            <a href="catalog.html" class="site-header__link">Каталог</a>
+            <a href="product.html" class="site-header__link">Товар</a>
+            <a href="order.html" class="site-header__link">Оформление заказа</a>
+            <a href="registration.html" class="site-header__link site-header__link--active">Регистрация</a>
+            <a href="login.html" class="site-header__link">Вход</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-form">
+        <div class="container">
+            <h1>Регистрация</h1>
+            <p class="page-form__lead">
+                Создайте учётную запись в «Потеряном башмаке», чтобы быстрее оформлять заказы
+                и следить за новинками обуви и одежды.
+            </p>
+
+            <form class="form" action="login.html" method="get">
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Личные данные</legend>
+
+                    <div class="form__grid">
+                        <div class="form__row">
+                            <label class="form__label" for="first-name">Имя</label>
+                            <input class="form__input" type="text" id="first-name" name="first-name"
+                                   placeholder="Например, Денис" required minlength="2" autocomplete="given-name">
+                        </div>
+                        <div class="form__row">
+                            <label class="form__label" for="last-name">Фамилия</label>
+                            <input class="form__input" type="text" id="last-name" name="last-name"
+                                   placeholder="Например, Иванов" required minlength="2" autocomplete="family-name">
+                        </div>
+                    </div>
+
+                    <div class="form__row">
+                        <label class="form__label" for="email">Электронная почта</label>
+                        <input class="form__input" type="email" id="email" name="email"
+                               placeholder="name@example.com" required autocomplete="email">
+                    </div>
+
+                    <div class="form__row">
+                        <label class="form__label" for="phone">Телефон</label>
+                        <input class="form__input" type="tel" id="phone" name="phone"
+                               placeholder="+7 900 000-00-00" required
+                               pattern="[+]?[0-9\s()\-]{10,18}" autocomplete="tel">
+                        <p class="form__hint">От 10 цифр, можно со знаком «+», пробелами и дефисами.</p>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Размеры и пароль</legend>
+
+                    <div class="form__grid">
+                        <div class="form__row">
+                            <label class="form__label" for="shoe-size">Размер обуви</label>
+                            <input class="form__input" type="number" id="shoe-size" name="shoe-size"
+                                   min="34" max="47" value="40">
+                        </div>
+                        <div class="form__row">
+                            <label class="form__label" for="birth-date">Дата рождения</label>
+                            <input class="form__input" type="date" id="birth-date" name="birth-date"
+                                   min="1920-01-01" max="2012-12-31">
+                        </div>
+                    </div>
+
+                    <div class="form__row">
+                        <label class="form__label" for="password">Пароль</label>
+                        <input class="form__input" type="password" id="password" name="password"
+                               placeholder="Не менее 8 символов" required minlength="8" autocomplete="new-password">
+                    </div>
+
+                    <div class="form__row">
+                        <label class="form__label" for="password-repeat">Повтор пароля</label>
+                        <input class="form__input" type="password" id="password-repeat" name="password-repeat"
+                               placeholder="Повторите пароль" required minlength="8" autocomplete="new-password">
+                    </div>
+                </fieldset>
+
+                <label class="form__choice form__choice--block">
+                    <input type="checkbox" name="newsletter" value="yes">
+                    Присылать новости о скидках и новинках
+                </label>
+
+                <label class="form__choice form__choice--block">
+                    <input type="checkbox" name="agreement" value="yes" required>
+                    Я согласен с правилами магазина
+                </label>
+
+                <div class="form__actions">
+                    <button type="submit" class="btn btn--primary">Зарегистрироваться</button>
+                    <button type="reset" class="btn btn--outline">Очистить</button>
+                </div>
+                <p class="form__link">Уже есть аккаунт? <a href="login.html">Войти</a></p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <img src="../images/kotost.jpg" alt="Котость" class="site-footer__mascot">
+        <p>© 2026 Потеряный башмак</p>
+        <p>Интернет-магазин брендовой одежды</p>
+    </div>
+</footer>
+</body>
+</html>

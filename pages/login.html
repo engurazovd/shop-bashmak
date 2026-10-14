@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход — Потеряный башмак</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container">
+        <div>
+            <a href="../index.html" class="site-header__logo">Потеряный башмак</a>
+        </div>
+
+        <nav class="site-header__nav">
+            <a href="../index.html" class="site-header__link">Главная</a>
+            <a href="catalog.html" class="site-header__link">Каталог</a>
+            <a href="product.html" class="site-header__link">Товар</a>
+            <a href="order.html" class="site-header__link">Оформление заказа</a>
+            <a href="registration.html" class="site-header__link">Регистрация</a>
+            <a href="login.html" class="site-header__link site-header__link--active">Вход</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-form">
+        <div class="container">
+            <h1>Вход</h1>
+            <p class="page-form__lead">Войдите в свой аккаунт, чтобы продолжить покупки.</p>
+
+            <form class="form form--narrow" action="../index.html" method="get">
+                <div class="form__row">
+                    <label class="form__label" for="email">Электронная почта</label>
+                    <input class="form__input" type="email" id="email" name="email"
+                           placeholder="name@example.com" required autocomplete="email">
+                </div>
+
+                <div class="form__row">
+                    <label class="form__label" for="password">Пароль</label>
+                    <input class="form__input" type="password" id="password" name="password"
+                           placeholder="Введите пароль" required minlength="8" autocomplete="current-password">
+                </div>
+
+                <label class="form__choice form__choice--block">
+                    <input type="checkbox" name="remember" value="yes">
+                    Запомнить меня
+                </label>
+
+                <div class="form__actions">
+                    <button type="submit" class="btn btn--primary">Войти</button>
+                </div>
+                <p class="form__link">Нет аккаунта? <a href="registration.html">Зарегистрироваться</a></p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <img src="../images/kotost.jpg" alt="Котость" class="site-footer__mascot">
+        <p>© 2026 Потеряный башмак</p>
+        <p>Интернет-магазин брендовой одежды</p>
+    </div>
+</footer>
+</body>
+</html>
