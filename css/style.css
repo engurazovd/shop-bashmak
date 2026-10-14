@@ -1,7 +1,4 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Shafarik&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .pt-sans-regular {
   font-family: "PT Sans", sans-serif;
@@ -27,7 +24,6 @@
   font-style: italic;
 }
 
-
 :root {
   --color-ink: #22293a;      
   --color-bg: #f4f2ec;       
@@ -39,7 +35,7 @@
   --color-accent: #c98a2e;   
   --color-accent-dark: #a5701f;
 
-  --font-main: 'PT Sans', Arial, sans-serif;
+  --font-main: 'PT Sans Narrow', Arial, sans-serif;
 
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -50,7 +46,6 @@
   --transition: 150ms ease;
   --content-width: 1180px;
 }
-
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -80,7 +75,6 @@ table { border-collapse: collapse; width: 100%; }
   padding-inline: var(--space-sm);
 }
 
-
 .btn {
   display: inline-block;
   font-family: var(--font-main);
@@ -103,7 +97,6 @@ table { border-collapse: collapse; width: 100%; }
 .btn:active { transform: translateY(0); }
 
 .btn:focus-visible, a:focus-visible { outline: 2px solid var(--color-accent-dark); outline-offset: 2px; }
-
 
 .site-header {
   background: var(--color-ink);
@@ -143,7 +136,6 @@ table { border-collapse: collapse; width: 100%; }
   border-color: var(--color-accent);
 }
 
-
 .hero { padding-block: var(--space-lg); }
 .hero__text { color: var(--color-muted); max-width: 60ch; }
 
@@ -171,7 +163,6 @@ table { border-collapse: collapse; width: 100%; }
 
 .category-card__title { margin-bottom: var(--space-xs); }
 .category-card__text { color: var(--color-muted); font-size: 0.95rem; }
-
 
 .catalog-intro { padding-block: var(--space-md); }
 
@@ -212,8 +203,6 @@ table { border-collapse: collapse; width: 100%; }
 .product-tile__price { margin: 0.4rem 0 0.6rem; font-weight: 700; color: var(--color-accent-dark); }
 .product-tile__link { margin-top: auto; align-self: flex-start; }
 
-
-   
 .product-card {
   display: flex;
   flex-direction: column;
@@ -252,7 +241,6 @@ table { border-collapse: collapse; width: 100%; }
   gap: var(--space-sm);
   margin-top: var(--space-md);
 }
-
 
 .size-switcher { margin: var(--space-sm) 0; }
 
@@ -301,7 +289,6 @@ table { border-collapse: collapse; width: 100%; }
   outline-offset: 2px;
 }
 
-
 .table-scroll { width: 100%; overflow-x: auto; }
 .spec-table { font-size: 0.92rem; min-width: 320px; }
 
@@ -316,7 +303,6 @@ table { border-collapse: collapse; width: 100%; }
 .spec-table td { padding: 0.6em 0.8em; border-bottom: 1px solid var(--color-line); }
 .spec-table tr:nth-child(even) { background: var(--color-bg); }
 .spec-table tr:nth-child(odd)  { background: var(--color-surface); }
-
 
 .advantages { display: flex; flex-direction: column; gap: 0.4rem; }
 
@@ -333,7 +319,6 @@ table { border-collapse: collapse; width: 100%; }
   color: var(--color-accent-dark);
   font-weight: 700;
 }
-
 
 .site-footer { background: var(--color-ink); margin-top: var(--space-lg); }
 
@@ -393,7 +378,6 @@ table { border-collapse: collapse; width: 100%; }
   box-shadow: 0 0 0 3px rgba(201, 138, 46, 0.25);
 }
 
-/* :valid / :invalid — только после ввода, чтобы пустая форма не горела красным */
 .form__input:not(:placeholder-shown):valid { border-color: var(--color-ok); }
 .form__input:not(:placeholder-shown):invalid { border-color: var(--color-error); }
 .form__select:valid { border-color: var(--color-ok); }
