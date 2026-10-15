@@ -222,7 +222,7 @@
     </section>
 
     <script>
-        // Предвыбор товара, если пришли с карточки товара: order.html?product=puma
+        
         var id = new URLSearchParams(location.search).get('product');
         var select = document.getElementById('product');
         if (id && select.querySelector('option[value="' + id + '"]')) select.value = id;

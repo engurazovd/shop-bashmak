@@ -334,7 +334,7 @@ table { border-collapse: collapse; width: 100%; }
 .site-footer__mascot { width: 90px; border-radius: var(--radius); margin-bottom: var(--space-xs); }
 .site-footer p { margin: 0; font-size: 0.85rem; color: #ffffff; opacity: 0.85; }
 
-/* ===== ФОРМЫ (ЛР3) ===== */
+
 
 .page-form { padding-block: var(--space-lg); }
 .page-form__lead { color: var(--color-muted); max-width: 60ch; }
