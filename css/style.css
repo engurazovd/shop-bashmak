@@ -339,7 +339,6 @@ table { border-collapse: collapse; width: 100%; }
 .page-form { --form-w: 640px; padding-block: var(--space-lg); }
 .page-form--narrow { --form-w: 440px; }
 .page-form--wide { --form-w: 760px; }
-/* заголовок, подпись и форма — одна колонка по центру страницы (как .form-page в ЛР3) */
 .page-form .container { max-width: calc(var(--form-w) + 2 * var(--space-sm)); }
 .page-form__lead { color: var(--color-muted); max-width: 60ch; }
 
