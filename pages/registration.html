@@ -35,7 +35,7 @@
                 и следить за новинками обуви и одежды.
             </p>
 
-            <form class="form" action="login.html" method="get">
+            <form class="form" action="#" method="post">
                 <fieldset class="form__fieldset">
                     <legend class="form__legend">Личные данные</legend>
 
@@ -96,15 +96,19 @@
                     </div>
                 </fieldset>
 
-                <label class="form__choice form__choice--block">
-                    <input type="checkbox" name="newsletter" value="yes">
-                    Присылать новости о скидках и новинках
-                </label>
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Согласия</legend>
 
-                <label class="form__choice form__choice--block">
-                    <input type="checkbox" name="agreement" value="yes" required>
-                    Я согласен с правилами магазина
-                </label>
+                    <label class="form__choice form__choice--block">
+                        <input type="checkbox" name="newsletter" value="yes">
+                        Присылать новости о скидках и новинках
+                    </label>
+
+                    <label class="form__choice form__choice--block">
+                        <input type="checkbox" name="agreement" value="yes" required>
+                        Я согласен с правилами магазина
+                    </label>
+                </fieldset>
 
                 <div class="form__actions">
                     <button type="submit" class="btn btn--primary">Зарегистрироваться</button>
